@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<title>Live Cricket Score</title>
+</head>
+<body>
+<div class="container">
+<h1>{{ match_info.match_id }}. {{ match_info.teams[0] }} vs {{ match_info.teams[1] }}</h1>
+<p>Venue: {{ match_info.venue }} | Date: {{ match_info.date }} | Time: {{ match_info.time }}</p>
+<div class="row">
+<div class="col-sm-6">
+<h2>Team A</h2>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th>Runs</th>
+<td>{{ scoreboard["Team A"].runs }}</td>
+</tr>
+<tr>
+<th>Wickets</th>
+<td>{{ scoreboard["Team A"].wickets }}</td>
+</tr>
+<tr>
+<th>Overs</th>
+<td>{{ scoreboard["Team A"].overs }}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm-6">
+<h2>Team B</h2>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<th>Runs</th>
+<td>{{ scoreboard["Team B"].runs }}</td>
+</tr>
+<tr>
+<th>Wickets</th>
+<td>{{ scoreboard["Team B"].wickets }}</td>
+</tr>
+<tr>
+<th>Overs</th>
+<td>{{ scoreboard["Team B"].overs }}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>
+
